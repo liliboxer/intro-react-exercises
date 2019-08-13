@@ -1,37 +1,28 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function Color() {
-  const color = {
-    name: 'Black',
-    hex: 	'#000000',
-    rgb:  '0, 0, 0'
-  };
-
-  // ems for font
-  // rems for padding, margin, width, height 
-  const styles = {
-    backgroundColor: color.hex,
-    width: '0.4rem',
-    height: '0.4rem',
-    display: 'inline-block'
-  };
-
-  const fields = Object.keys(color)
-    .map(key => {
-      return (
-        <>
-          <dt>{key}<div style={styles}></div></dt>
-          <dd>{color[key]}</dd>
-        </>
-      );
-    });
-
-
+function Color({ name, hex, rgb: { r, g, b } }) {
 
   return (
     <dl>
-      {fields}
+      <dt>Name</dt>
+      <dd>{name}</dd>
+
+      <dt>Hex</dt>
+      <dd>{hex}</dd>
+
+      <dt>RGB</dt>
+      <dd>R: {r}</dd>
+      <dd>G: {g}</dd>
+      <dd>B: {b}</dd>
     </dl>
   );
-
 }
+
+Color.propTypes = {
+  name: PropTypes.string.isRequired,
+  hex: PropTypes.number.isRequired,
+  rgb: PropTypes.object.isRequired
+};
+
+export default Color;
