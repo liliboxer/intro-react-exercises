@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component renders App 1`] = `
+<dl>
+  <dt>
+    name
+    <div
+      style={
+        Object {
+          "backgroundColor": "#000000",
+          "display": "inline-block",
+          "height": "0.4rem",
+          "width": "0.4rem",
+        }
+      }
+    />
+  </dt>
+  <dd>
+    Black
+  </dd>
+  <dt>
+    hex
+    <div
+      style={
+        Object {
+          "backgroundColor": "#000000",
+          "display": "inline-block",
+          "height": "0.4rem",
+          "width": "0.4rem",
+        }
+      }
+    />
+  </dt>
+  <dd>
+    #000000
+  </dd>
+  <dt>
+    rgb
+    <div
+      style={
+        Object {
+          "backgroundColor": "#000000",
+          "display": "inline-block",
+          "height": "0.4rem",
+          "width": "0.4rem",
+        }
+      }
+    />
+  </dt>
+  <dd>
+    0, 0, 0
+  </dd>
+</dl>
+`;
