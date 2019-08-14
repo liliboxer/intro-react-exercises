@@ -1,19 +1,24 @@
-import React from 'react';
-import Dog from './Dog';
-import Header from './Header';
-import Color from './Color';
-import ColorPicker from './ColorPicker';
-import Incrementer from './Incrementer';
+import React, { Component } from 'react';
+import ColorPickerDisplay from './ColorPickerDisplay';
+import ColorDisplay from './ColorDisplay';
 
-export default function App() {
-  return (
-    <>
-      <Header/>
-      <Dog name="Max" age={5} weight="10lbs"/>
-      <Color color="Blue" hex="#00FF77" rgb={{ r:3, g:5, b:3 }}/>
-      <ColorPicker colors={['red', 'orange', 'yellow', 'green', 'blue', 'purple']} />
-      <Incrementer />
-    </>
-  );
+export default class App extends Component {
+  state = {
+    color: ''
+  }
+
+  colorHandler = color => {
+    this.setState({ color });
+    console.log(color);
+  }
+
+  render() {
+    return (
+      <>
+        <ColorPickerDisplay colors={['green', 'beige', 'yellow']} colorHandler={this.colorHandler}/>
+        <ColorDisplay color={this.state.color}/>
+      </>
+    );
+  }
 }
   

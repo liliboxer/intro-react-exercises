@@ -4,15 +4,7 @@ import PropTypes from 'prop-types';
 
 export default class ColorPicker extends Component {
   static propTypes = {
-    colors: PropTypes.arrayOf(PropTypes.string).isRequied
-  }
-
-  state = {
-    color: ''
-  };
-
-  colorHandler = color => {
-    this.setState({ color });
+    colors: PropTypes.arrayOf(PropTypes.string).isRequired,
   }
 
   render() {
