@@ -1,23 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import styles from './ColorPicker.css';
 
-export default function ColorPicker() {
+export default class ColorPicker extends Component {
+  static propTypes = {
+    colors: PropTypes.arrayOf(PropTypes.string).isRequired
+  }
 
-  const redHandler = () => {
+  redHandler = () => {
     console.log('red');
   };
-  const yellowHandler = () => {
+  yellowHandler = () => {
     console.log('yellow');
   };
-  const blueHandler = () => {
+  blueHandler = () => {
     console.log('blue');
   };
 
-  return (
-    <>
-      <button onClick={redHandler}>Red</button>
-      <button onClick={yellowHandler}>Yellow</button>
-      <button onClick={blueHandler}>Blue</button>
-    </>
-  );
+  render() {
+    return (
+      <section className={styles.ColorPicker}>
+        <button className={styles.red} onClick={this.redHandler}>Red</button>
+        <button className={styles.yellow} onClick={this.yellowHandler}>Yellow</button>
+        <button className={styles.blue} onClick={this.blueHandler}>Blue</button>
+      </section>
+    );
+  }
  
 }
