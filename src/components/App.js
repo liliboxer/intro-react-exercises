@@ -10,6 +10,6 @@ export default function App() {
       <Dog name="Max" age={5} weight="10lbs"/>
       <Color color="Blue" hex="#00FF77" rgb={{ r:3, g:5, b:3 }}/>
     </>
-  )
+  );
 }
   
