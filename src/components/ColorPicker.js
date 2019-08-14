@@ -12,7 +12,6 @@ export default class ColorPicker extends Component {
   };
 
   colorHandler = color => {
-    console.log('hi');
     this.setState({ color });
   }
 

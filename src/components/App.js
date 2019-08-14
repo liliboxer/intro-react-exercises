@@ -3,6 +3,7 @@ import Dog from './Dog';
 import Header from './Header';
 import Color from './Color';
 import ColorPicker from './ColorPicker';
+import Incrementer from './Incrementer';
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
       <Dog name="Max" age={5} weight="10lbs"/>
       <Color color="Blue" hex="#00FF77" rgb={{ r:3, g:5, b:3 }}/>
       <ColorPicker colors={['red', 'orange', 'yellow', 'green', 'blue', 'purple']} />
+      <Incrementer />
     </>
   );
 }
