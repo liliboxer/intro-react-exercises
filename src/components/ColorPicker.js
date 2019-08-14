@@ -1,30 +1,38 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import styles from './ColorPicker.css';
+import PropTypes from 'prop-types';
 
 export default class ColorPicker extends Component {
   static propTypes = {
-    colors: PropTypes.arrayOf(PropTypes.string).isRequired
+    colors: PropTypes.arrayOf(PropTypes.string).isRequied
   }
 
-  redHandler = () => {
-    console.log('red');
-  };
-  yellowHandler = () => {
-    console.log('yellow');
-  };
-  blueHandler = () => {
-    console.log('blue');
+  state = {
+    color: ''
   };
 
+  colorHandler = color => {
+    console.log('hi');
+    this.setState({ color });
+  }
+
   render() {
+    const { colors } = this.props;
+
+    const colorElements = colors.map(color => {
+      return (
+        <button key={color} style={{ backgroundColor: color }} onClick={() => this.colorHandler(color)}>
+          {color}
+        </button>
+      );
+    });
+
     return (
       <section className={styles.ColorPicker}>
-        <button className={styles.red} onClick={this.redHandler}>Red</button>
-        <button className={styles.yellow} onClick={this.yellowHandler}>Yellow</button>
-        <button className={styles.blue} onClick={this.blueHandler}>Blue</button>
+        <div style={{ backgroundColor: this.state.color }}></div>
+        {colorElements}
       </section>
     );
   }
- 
 }
+ 

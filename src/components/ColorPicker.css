@@ -1,9 +1,14 @@
-
 .ColorPicker {
   button {
     border: none;
     padding: 1em;
+
     cursor: pointer;
+  }
+
+  div {
+    width: 100px;
+    height: 100px;
   }
 
   .red {
@@ -14,8 +19,16 @@
     background-color: yellow;
   }
 
+  .green {
+    background-color: green;
+  }
+
   .blue {
     background-color: blue;
     color: white;
+  }
+
+  .purple {
+    background-color: purple;
   }
 }
