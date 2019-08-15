@@ -29,7 +29,7 @@ export default class TextFormatter extends Component {
   }
 
   render() {
-    const { text, formattedText, color,  handleColorChange } = this.state;
+    const { text, formattedText, color } = this.state;
 
     return (
       <>
