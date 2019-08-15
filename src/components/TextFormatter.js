@@ -5,7 +5,8 @@ export default class TextFormatter extends Component {
   state = {
     text: '',
     formattedText: '',
-    font: 'Ghost'
+    font: 'Ghost',
+    color: ''
   }
 
   handleSubmit = event => {
@@ -23,16 +24,20 @@ export default class TextFormatter extends Component {
     console.log(formattedText);
   }
 
+  handleColorChange = ({ target }) => {
+    this.setState({ color: target.value });
+  }
+
   render() {
-    const { text, formattedText } = this.state;
+    const { text, formattedText, color,  handleColorChange } = this.state;
 
     return (
       <>
         <form onSubmit={this.handleSubmit}>
-          {/* <input type="color"></input> */}
+          <input type="color" name="color" value={color} onChange={this.handleColorChange}></input>
           <input placeholder="Type Here" name="text" value={text} onChange={this.handleTextChange}></input>
         </form>
-        <pre>{formattedText}</pre>
+        <pre style={{ color: color } }>{formattedText}</pre>
       </>
     );
   }
