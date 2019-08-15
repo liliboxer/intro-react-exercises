@@ -4,9 +4,10 @@ import React, { Component } from 'react';
 // import ColorPickerDisplay from './ColorPickerDisplay';
 // import ColorDisplay from './ColorDisplay';
 // import RandomColor from './RandomColor';
-import PhotoAlbum from './PhotoAlbum';
-import Header from './Header';
-import Footer from './Footer';
+// import PhotoAlbum from './PhotoAlbum';
+// import Header from './Header';
+// import Footer from './Footer';
+import TextFormatter from './TextFormatter';
 
 export default class App extends Component {
   // state = {
@@ -21,12 +22,13 @@ export default class App extends Component {
   render() {
     return (
       <>
-        <Header/>
+        <TextFormatter />
+        {/* <Header/>
         <PhotoAlbum title={'Lili\'s Photos'} photos={[
           'https://i.dailymail.co.uk/i/pix/2016/03/18/15/324D202500000578-3498922-image-a-33_1458315465874.jpg',
           'http://i.imgur.com/GQcvWqx.jpg'
         ]}/>
-        <Footer/>
+        <Footer/> */}
         {/* <ColorPickerDisplay colors={['green', 'beige', 'yellow']} colorHandler={this.colorHandler}/>
         <ColorDisplay color={this.state.color}/> */}
         {/* <RandomColor /> */}
