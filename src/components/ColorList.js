@@ -4,7 +4,6 @@ import ColorItem from './ColorItem';
 
 function ColorList({ colors }) {
   const colorList = colors.map(color => {
-    console.log(color);
     return (
       <li key={color.name}>
         <ColorItem name={color.name} hex={color.hex} rgb={color.rgb}/>
