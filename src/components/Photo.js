@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Photo({ photoURL }) {
   return (
     <>
-      <img src={photoURL}></img>
+      <img style={{ width: '200px', height: '200px' }} src={photoURL}></img>
     </>
   );
 }
